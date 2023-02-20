@@ -10,6 +10,8 @@ WINDOW_WIDTH = 630
 screen = pygame.display.set_mode((WINDOW_HEIGHT, WINDOW_WIDTH))
 pygame.display.set_caption('Paper Rock Scissors')
 
+background = pygame.image.load("background.png")
+
 
 run_program = True
 clock = pygame.time.Clock()
@@ -24,7 +26,7 @@ paper = pygame.image.load("paper.png")
 scissors = pygame.image.load("scissors.png")
 
 def redraw_window():
-    background = pygame.image.load("background.png")
+    screen.blit(background, (50, 20))
     screen.blit(bot, (2, 50))
     screen.blit(human, (20, 30))
     screen.blit(rock, (50, 40))
