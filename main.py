@@ -3,15 +3,14 @@ import pygame, random
 pygame.init()
 pygame.font.init()
 
-WINDOW_HEIGHT = 750
-WINDOW_WIDTH = 630
+WINDOW_HEIGHT = 500
+WINDOW_WIDTH = 850
 
 #Setting up the game
-screen = pygame.display.set_mode((WINDOW_HEIGHT, WINDOW_WIDTH))
+screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Paper Rock Scissors')
 
 background = pygame.image.load("background.png")
-
 
 run_program = True
 clock = pygame.time.Clock()
@@ -37,7 +36,6 @@ def main():
     '''
     The main function of the program, includes the program flow and running including FPS and drawing functions.
     '''
-
     run_program = True
 
     #Main prorgam loop
@@ -50,7 +48,8 @@ def main():
                 run_program = False
         
         redraw_window()
+
+        pygame.display.update()
                 
 if __name__ == '__main__':
     main()
-
